@@ -1,0 +1,85 @@
+body {
+    font-family: Arial, sans-serif;
+    transition: background-color 0.5s, color 0.5s;
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+h1 {
+    text-align: center;
+}
+
+.timer-container,
+.score-container {
+    margin: 20px auto;
+    text-align: center;
+    width: 80%;
+}
+
+.switch {
+    display: inline-block;
+    position: relative;
+    width: 60px;
+    height: 34px;
+    margin: 10px auto;
+}
+
+/* Ändern Sie die Farben des Dark-Mode-Schalters auf grelles Pink */
+.switch input {
+    display: none;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ffc0cb; /* Hintergrundfarbe auf grelles Pink ändern */
+    transition: 0.4s;
+    border-radius: 34px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: #ff69b4; /* Farbe des Schalters auf grelles Pink ändern */
+    transition: 0.4s;
+    border-radius: 50%;
+}
+
+input:checked + .slider {
+    background-color: #ff69b4; /* Aktive Hintergrundfarbe auf grelles Pink ändern */
+}
+
+input:checked + .slider:before {
+    transform: translateX(26px);
+    background-color: #222; /* Ändern Sie die Farbe des Kreises im Dark-Mode */
+}
+
+.dark-mode {
+    background-color: #222;
+    color: #fff;
+}
+
+.timer-container button,
+.score-container button {
+    background-color: pink; /* Hintergrundfarbe der Buttons auf Pink */
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    margin: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.timer-container button:hover,
+.score-container button:hover {
+    background-color: #ff69b4; /* Hover-Farbe der Buttons auf grelles Pink ändern */
+}
